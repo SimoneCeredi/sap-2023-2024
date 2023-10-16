@@ -47,6 +47,11 @@ public class EScooterManServer extends AbstractVerticle {
         server.requestHandler(router).listen(port);
 
         logger.log(Level.INFO, "EScooterMan server ready - port: " + port);
+        logger.log(Level.INFO,
+                "Connect to: http://localhost:" + port + "/static/escooter-registration.html" +
+                        "\n\t\t\t  or: http://localhost:" + port + "/static/ride-dashboard.html" +
+                        "\n\t\t\t  or: http://localhost:" + port + "/static/user-registration.html"
+        );
     }
 
     protected void registerNewUser(RoutingContext context) {
